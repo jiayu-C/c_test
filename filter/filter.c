@@ -1,35 +1,35 @@
 #include "stdio.h"
 
-void getMidleValue(int tem[],int n) //   中位值滤波: 冒泡排序取中间值
+//  冒泡排序
+void getMidleValue(int *p,int n) 
 {
-	int i,j,temp;
-	for(i=0;i<n-1;i++)  // 
+	int i,j;
+	int temp = 0;
+	for(i=0;i<n;i++)  // 比较剩下趟数
 	{
-		for(j=0;j<i-1;j++)			// 比较的趟数
+		for(j=i;j<n;j++)			// 两两比较次数
 		{
-			if(tem[j] > tem[j+1])	// 数与数间比较的次数
+			if(*(p+i) > *(p+j))	// 数与数间比较的次数
 			{
-				temp = tem[j+1];
-				tem[j+1] = tem[j];
-				tem[j] = temp;
+				temp = *(p+i);
+				*(p+i) = *(p+j);
+				*(p+j) = temp;
 			}
 		}
 	}
-	for(i=0;i<n;i++)
-	{
-		printf("%d-",tem[i]);
-	}
+
 }
 
-void array_num(void)
-{
-
-	printf("hello");
-}
-
-
+#define N 10
 void filtest(void)
 {
-	printf("flltest\r\n");
+    int array_data[10] = {6,5,5,62,4,9,3,33,2,1};
+	int i = 0;
+	getMidleValue(array_data,10);
+	for (i = 0; i < sizeof(array_data)/sizeof(int); i++)
+	{
+		printf("%d-", array_data[i]);
+	}
+	printf("\nflltest\r\n");
 }
 

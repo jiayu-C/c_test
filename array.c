@@ -3,5 +3,5 @@
 
 void  array_test(void)
 {
-    printf("array test------\r\n");
+
 }

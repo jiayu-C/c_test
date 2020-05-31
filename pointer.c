@@ -23,13 +23,14 @@ static int test_array_2[][3] = {
 };
 static int *test2_p = test_array_2;
 
+// 指针测试
 void array_2_test()    // 二维数组
 {
    printf("%d\r\n",*test2_p); 
 }
 
 
-
+// 函数指针
 void p_fun_test_1(void)
 {
     printf("p_fun_test_1\r\n");
@@ -45,8 +46,6 @@ void p_fun_test_3(void)
     printf("p_fun_test_3\r\n");
 }
 
-
-// 函数指针
 void (*fun_1_p)(void);
 typedef (*FUN_P)(void);
 FUN_P fun_2_p = p_fun_test_2;

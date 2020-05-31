@@ -19,7 +19,7 @@ struct people student[3] = {
 typedef struct FRUIT_T
 {
     char name[20];
-    int price;
+    int  price;
     char color[10];
 }FRUIT_T;
 
