@@ -67,3 +67,20 @@ void p_fun_test(void)
     fun_3_p();
     fun_4_p(p_fun_test_2,p_fun_test_3);
 }
+
+void cla_printf(int a,int b,void(*pFunc)(int ,int ))
+{
+    pFunc(a,b);
+}
+
+int sum(int a,int b)
+{
+   printf("a+b = %d\n",a+b);
+
+}
+
+int sub(int a,int b)
+{
+   printf("a-b = %d\n",a-b);
+}
+
