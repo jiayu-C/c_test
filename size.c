@@ -1,6 +1,8 @@
 #include "main.h"
 
-
+////////////////////////////////////  
+//////////在64位系统中指针变量的sizeof通常为8  32位是4
+////////////////////////////////////
 void printfDataSize(void)
 {
     printf("size of char: (%d)  short int:(%d)\
