@@ -60,6 +60,31 @@ void insertNode(struct NODE_T* pHeader, char* student,int scoer)
 }
 
 ////////////////////////////////////////////
+///////////////////////// 删除节点
+////////////////////////////////////////////
+void deletNode(struct NODE_T* pHeader,int score)
+{
+    struct NODE_T* pCurrent = pHeader;
+    struct NODE_T* pPrevious = pHeader;
+    assert(pCurrent != NULL);
+    assert(pPrevious != NULL);
+    while(pCurrent->next != NULL)
+    {
+        if(pCurrent->data == score)
+        {
+            printf("delet==\n");
+            pPrevious->next = pCurrent->next;
+            free(pCurrent);
+
+            pCurrent = pPrevious;
+        }
+        
+        pPrevious = pCurrent;
+        pCurrent = pCurrent->next;
+    }
+}
+
+////////////////////////////////////////////
 ///////////////////////// 打印链表
 ////////////////////////////////////////////
 
@@ -83,10 +108,16 @@ void linkTest(void)
 
     p = createNodeHead();
 
-    insertNode(p,"joh",59);
-    insertNode(p,"mac",20);
-    insertNode(p,"blu",68);
+    insertNode(p,"na_1",59);
+    insertNode(p,"na_2",20);
+    insertNode(p,"na_3",68);
+    insertNode(p,"na_4",20);
+    insertNode(p,"na_5",68);    
     printfLink(p);
+    printf("==========\n");
+    deletNode(p,20);
+    printfLink(p);
+    
     
 }
 
