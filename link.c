@@ -13,12 +13,12 @@
 ///////////////////////// 初始化节点---单向
 ////////////////////////////////////////////
 
-struct NODE_T* createNodeHead(void)
+NODE_T* createNodeHead(void)
 {
-    struct NODE_T* pHeader = NULL;
+    NODE_T* pHeader = NULL;
     
     // printf("struct size: %d\n",sizeof(struct NODE_T));
-    pHeader = (struct NODE_T*)malloc(sizeof(struct NODE_T));
+    pHeader = (struct NODE_T*)malloc(sizeof(NODE_T));
     if (pHeader != NULL)
     { 
         pHeader->name = "first";  
@@ -40,10 +40,10 @@ struct NODE_T* createNodeHead(void)
 ///////////////////////// 插入节点
 ////////////////////////////////////////////
 
-void insertNode(struct NODE_T* pHeader, char* student,int scoer)
+void insertNode(NODE_T* pHeader, char* student,int scoer)
 {
-    struct NODE_T* pTemp = pHeader;
-    struct NODE_T* newNode = (struct NODE_T*)malloc(sizeof(struct NODE_T));
+    NODE_T* pTemp = pHeader;
+    NODE_T* newNode = (NODE_T*)malloc(sizeof(NODE_T));
     assert(pTemp);
     assert(newNode);
 
@@ -62,10 +62,10 @@ void insertNode(struct NODE_T* pHeader, char* student,int scoer)
 ////////////////////////////////////////////
 ///////////////////////// 删除节点
 ////////////////////////////////////////////
-void deletNode(struct NODE_T* pHeader,int score)
+void deletNode(NODE_T* pHeader,int score)
 {
-    struct NODE_T* pCurrent = pHeader;
-    struct NODE_T* pPrevious = pHeader;
+    NODE_T* pCurrent = pHeader;
+    NODE_T* pPrevious = pHeader;
     assert(pCurrent != NULL);
     assert(pPrevious != NULL);
     while(pCurrent->next != NULL)
@@ -84,13 +84,19 @@ void deletNode(struct NODE_T* pHeader,int score)
     }
 }
 
+
+////////////////////////////////////////////
+///////////////////////// 链表升序
+////////////////////////////////////////////
+
+
 ////////////////////////////////////////////
 ///////////////////////// 打印链表
 ////////////////////////////////////////////
 
-void printfLink(struct NODE_T* node)
+void printfLink(NODE_T* node)
 {
-    struct NODE_T* pTemp = node;
+    NODE_T* pTemp = node;
     assert(pTemp);
     
     while (pTemp->next != NULL)
@@ -102,9 +108,9 @@ void printfLink(struct NODE_T* node)
 }
 
 
-void linkTest(void)
+void linkTestSingle(void)
 {
-    struct NODE_T* p = NULL;
+    NODE_T* p = NULL;
 
     p = createNodeHead();
 
@@ -117,8 +123,6 @@ void linkTest(void)
     printf("==========\n");
     deletNode(p,20);
     printfLink(p);
-    
-    
 }
 
 
