@@ -3,6 +3,7 @@
 #include "size.h"
 #include "link.h"
 #include "pointer.h"
+#include "array.h"
 
 int twoSum(int* nums, int numsSize, int target){
     int firNum = 0,secNum = 0;
