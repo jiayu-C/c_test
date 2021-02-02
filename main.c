@@ -20,31 +20,10 @@ int twoSum(int* nums, int numsSize, int target){
 }
 
 
-char testArray[7] = "hello";
-struct test
-{
-   char testData[64];
-   int scor;
-};
-
-
-void charAndconst(void)
-{
-   struct test myData = 
-   {
-      "jiayu",
-      64
-   };
-   strcpy(&myData.testData,"jone");
-   printf("%s  -%d\n",myData.testData,myData.scor);
-}
 
 
 int main(int argc, char *argv[])
 {
-   // linkTestSingle();
-   // charAndconst();
-   // randTest();
-   filtest();
+   printf("hello word\n");
 	return 0;
 }
