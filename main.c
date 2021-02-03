@@ -5,6 +5,8 @@
 #include "pointer.h"
 #include "array.h"
 
+
+// 2数之和
 int twoSum(int* nums, int numsSize, int target){
     int firNum = 0,secNum = 0;
     for(firNum = 0;firNum<(numsSize-1);firNum++)
