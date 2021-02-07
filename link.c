@@ -18,7 +18,7 @@ NODE_T* createNodeHead(void)
     NODE_T* pHeader = NULL;
     
     // printf("struct size: %d\n",sizeof(struct NODE_T));
-    pHeader = (struct NODE_T*)malloc(sizeof(NODE_T));
+    pHeader = (NODE_T*)malloc(sizeof(NODE_T));
     if (pHeader != NULL)
     { 
         pHeader->name = "first";  

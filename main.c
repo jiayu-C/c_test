@@ -29,5 +29,6 @@ int twoSum(int* nums, int numsSize, int target){
 int main(int argc, char *argv[])
 {
    printf("hello word\n");
+   linkTestSingle();
 	return 0;
 }
